@@ -3,46 +3,78 @@
 ## Overview of Project
 
 ### Background
+Maria, a member of the PyCitySchools district board, would like an analysis of the district's math and reading scores this year with the help of Python in Jupyter Notebooks. The deliverables for this project include an analysis of scores based on several factors including school, school spending per student, school size, school type and grade level. Additionally, due to evidence of academic dishonesty of 9th graders at Thomas High School, the script will also re-run the audit with those scores removed to compare the score summaries. 
 
 ### Purpose
+As an introduction to Jupyter Notebook, the purpose of this project is to utilize Pandas DataFrames with Python to complete the analysis. Since the script needs to be refactored, it gives extra opportunity to practice using Pandas DataFrames, such as loc, merge and groupby, to wrangle data. This project will help to understand the benefits of analyzing large, messy data sets using Pandas DataFrames and Jupyter Notebook. 
+
 
 ## Results
-* How is the district summary affected?
+The results of this analysis include charts produced before and after changing the 9th grade scores at Thomas High School to NaNs due to evidence of academic dishonesty. For each metric, there will be an original summary and a refactored summary, which are labeled. 
 
-<img width="786" alt="Screen Shot 2021-07-15 at 12 46 17 AM" src="https://user-images.githubusercontent.com/85946042/125736483-030f2694-9ea9-4582-9790-3632393ab427.png">
-<img width="772" alt="Screen Shot 2021-07-15 at 12 54 24 AM" src="https://user-images.githubusercontent.com/85946042/125736512-12519127-aec6-4d95-aa0a-4f4a8766dc04.png">
+* District Summary:
+  - Here, the refactored district summary shows a slight decrease in math scores (-0.1) , % Passing Math (-0.2%), % Passing Reading (-0.3%)  and % Overall Passing   (-0.1%) after the 9th grade scores from Thomas High School were changed to NaNs. Due to the large district size, 39,170 students, a change of 461 scores (~1% of the  total score count) did not drastically affect the district results. There were decreases, but only to the tenth place at most. 
 
-* How is the school summary affected?
-<img width="836" alt="Screen Shot 2021-07-15 at 12 50 53 AM" src="https://user-images.githubusercontent.com/85946042/125736585-3d4612d0-a9b7-4abd-a3cd-5c54c9924e3e.png">
-
-<img width="828" alt="Screen Shot 2021-07-15 at 12 54 59 AM" src="https://user-images.githubusercontent.com/85946042/125736546-787e5725-c52e-4ddf-bd2f-7af442da5e6e.png">
-
-* How does replacing the ninth graders' math and reading scores affect Thomas High School's performance relative to the other schools?
- -insert top and bottom school screenshots
+  - **Original District Summary:**
+  - <img width="772" alt="Screen Shot 2021-07-15 at 12 54 24 AM" src="https://user-images.githubusercontent.com/85946042/125736512-12519127-aec6-4d95-aa0a-4f4a8766dc04.png">
+  - **Refactored District Summary:**
+  - <img width="771" alt="Screen Shot 2021-07-15 at 12 44 39 PM" src="https://user-images.githubusercontent.com/85946042/125833369-a4586f9e-8f39-4429-b20e-e5dfd539fff8.png">
 
 
-* How does replacing the ninth-grad scores affect:
-  - math and reading scores by grade
 
-<img width="252" alt="Screen Shot 2021-07-15 at 1 08 07 AM" src="https://user-images.githubusercontent.com/85946042/125737432-2da65934-88e6-441f-a7d6-6bab87635348.png">
-<img width="247" alt="Screen Shot 2021-07-15 at 1 08 02 AM" src="https://user-images.githubusercontent.com/85946042/125737434-2b75cbde-9a0a-4d90-bb0e-28c0e74c211f.png">
-<img width="245" alt="Screen Shot 2021-07-15 at 1 07 20 AM" src="https://user-images.githubusercontent.com/85946042/125737435-4b986fd1-dcaf-4ac5-8925-f02bf69603bf.png">
-<img width="250" alt="Screen Shot 2021-07-15 at 1 07 14 AM" src="https://user-images.githubusercontent.com/85946042/125737436-d28aba3d-9d64-4925-92ab-b388f7f6d6d5.png">
+* School Summary:
+  - Original School Summary:
+  - <img width="830" alt="Screen Shot 2021-07-15 at 1 52 48 PM" src="https://user-images.githubusercontent.com/85946042/125842070-67ed7016-3599-4347-aa6d-cae738593017.png">
 
 
-  - scores by school spending
-
-<img width="691" alt="Screen Shot 2021-07-15 at 12 52 34 AM" src="https://user-images.githubusercontent.com/85946042/125737499-0dc70f09-cf75-43eb-a59e-44eba3bd07f4.png">
-<img width="682" alt="Screen Shot 2021-07-15 at 12 56 45 AM" src="https://user-images.githubusercontent.com/85946042/125737540-6185f1ab-ac6e-4311-b090-afb999f3b61a.png">
-
-  - scores by school size
-  <img width="631" alt="Screen Shot 2021-07-15 at 12 57 00 AM" src="https://user-images.githubusercontent.com/85946042/125737566-a6abcad4-1053-4e31-ba57-c506d7aa1a74.png">
-<img width="627" alt="Screen Shot 2021-07-15 at 12 53 16 AM" src="https://user-images.githubusercontent.com/85946042/125737586-19281b51-a8cd-4c85-911b-58e2fc6df39b.png">
+  - Refactored School Summary: 
+  - <img width="829" alt="Screen Shot 2021-07-15 at 1 54 46 PM" src="https://user-images.githubusercontent.com/85946042/125842086-525ce6a9-9151-4359-8c30-70ec0a9bd749.png">
 
 
-  - scores by school type
-  <img width="591" alt="Screen Shot 2021-07-15 at 12 57 12 AM" src="https://user-images.githubusercontent.com/85946042/125736754-9661e9d3-f0e4-425b-bdb3-1c3b6934ee97.png">
-<img width="596" alt="Screen Shot 2021-07-15 at 12 53 31 AM" src="https://user-images.githubusercontent.com/85946042/125738075-34c6f0fb-7e9a-46d3-a3d3-95846a6c1e9d.png">
+
+* Thomas High School's Performance Relative to the Other Schools:
+  - Before replacing the ninth graders' math and reading scores, Thomas High School ranked 2nd out of 14. After replacing the scores with NaNs, Thomas High School still ranked 2nd out of 14. 
+  - **Original Rankings Based on % Overall Passing:**
+  - <img width="830" alt="Screen Shot 2021-07-15 at 1 52 48 PM" src="https://user-images.githubusercontent.com/85946042/125842070-67ed7016-3599-4347-aa6d-cae738593017.png">
+
+
+  - **Refactored Rankings Based on % Overall Passing:**
+  - <img width="829" alt="Screen Shot 2021-07-15 at 1 54 46 PM" src="https://user-images.githubusercontent.com/85946042/125842086-525ce6a9-9151-4359-8c30-70ec0a9bd749.png">
+
+
+
+* Math and Reading Scores by Grade:
+  - **Original Math and Reading Scores:**
+  - <img width="248" alt="Screen Shot 2021-07-15 at 1 59 42 PM" src="https://user-images.githubusercontent.com/85946042/125842661-7577a8d9-28fd-4509-86de-fd94fe4e3faa.png"> <img width="243" alt="Screen Shot 2021-07-15 at 1 59 48 PM" src="https://user-images.githubusercontent.com/85946042/125842673-eaee034d-6e9e-4c5e-9f43-f7eff0dc3e95.png">
+
+
+ 
+  - **Refactored Math and Reading Scores:**
+  - <img width="245" alt="Screen Shot 2021-07-15 at 1 58 07 PM" src="https://user-images.githubusercontent.com/85946042/125842412-fd4bff48-adff-4a37-abb0-ec50c2088311.png"> <img width="246" alt="Screen Shot 2021-07-15 at 1 58 02 PM" src="https://user-images.githubusercontent.com/85946042/125842429-912c6241-197b-4803-bfb3-e8a0d61a3f7c.png">
+
+
+* Scores by School Spending:
+  - **Original Scores by School Spending:**
+  - <img width="681" alt="Screen Shot 2021-07-15 at 2 00 45 PM" src="https://user-images.githubusercontent.com/85946042/125842891-2f773065-691b-41f6-9e92-4a01bcfd89fe.png">
+
+  - **Refactored Scores by School Spending:**
+  - <img width="680" alt="Screen Shot 2021-07-15 at 2 03 21 PM" src="https://user-images.githubusercontent.com/85946042/125843335-a0e07823-71ec-4a23-be31-968e1576d377.png">
+
+
+* Scores by School Size:
+  - **Original Scores by School Size:**
+  - <img width="630" alt="Screen Shot 2021-07-15 at 2 00 58 PM" src="https://user-images.githubusercontent.com/85946042/125842931-d24835ce-b4b9-46a4-8ba5-285faa5ab4a8.png">
+
+  - **Refactored Scores by School Size:**
+  - <img width="622" alt="Screen Shot 2021-07-15 at 2 03 38 PM" src="https://user-images.githubusercontent.com/85946042/125843364-0de9ccfc-542b-4854-bd66-f79c5aa9436f.png">
+
+
+* Scores by School Type:
+  - **Original Scores by School Type:**
+  -  <img width="588" alt="Screen Shot 2021-07-15 at 2 01 24 PM" src="https://user-images.githubusercontent.com/85946042/125842933-f7897de0-f62b-45a8-9408-c745af7e07b7.png">
+  - **Refactored Scores by School Type:**
+  - <img width="589" alt="Screen Shot 2021-07-15 at 2 03 50 PM" src="https://user-images.githubusercontent.com/85946042/125843380-1578e627-12ec-4f0f-bcb1-f0aba8725973.png">
+
 
 
 
