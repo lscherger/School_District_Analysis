@@ -1,6 +1,4 @@
 # School_District_Analysis
-Analysis of school district testing data
-# School_District_Analysis
 
 ## Overview of Project
 
